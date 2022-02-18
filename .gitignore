@@ -1,0 +1,12 @@
+# Folder
+node_modules/
+mongo-volume/
+build/
+
+# Enviroment
+.env
+
+# Yarn logs
+yarn-error.log
+
+frontend/

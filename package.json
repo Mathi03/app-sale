@@ -1,0 +1,43 @@
+{
+  "name": "nodejs-express-reactjs",
+  "version": "1.0.0",
+  "description": "Sales app",
+  "main": "src/index.js",
+  "scripts": {
+    "pre:build": "rm -rf build/ && cd frontend && rm -rf build/",
+    "build": "yarn pre:build && babel src --out-dir build && cd frontend && yarn install && yarn build",
+    "backend:build": "babel src --out-dir build",
+    "serve": "node build/index.js",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "node build/index.js"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "jwt",
+    "authentication"
+  ],
+  "author": "George Miguel",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "3.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@fsouza/prettierd": "^0.18.1",
+    "install": "^0.13.0",
+    "prettier": "^2.5.1"
+  }
+}
